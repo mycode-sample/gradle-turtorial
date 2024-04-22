@@ -13,6 +13,7 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven { setUrl("https://maven.aliyun.com/repository/public") }
 }
 
 dependencies {
