@@ -35,3 +35,9 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+tasks.register<Copy>("copy-github") {
+    from("../.github/workflowsbackup/gradle.yml")
+    into("src/main/resources")
+    include("*.*")
+}
