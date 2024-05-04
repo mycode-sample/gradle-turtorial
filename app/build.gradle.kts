@@ -24,6 +24,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    implementation(libs.jackson.core)
+    implementation(libs.jackson.databind)
+    implementation(libs.jackson.annotations)
 }
 
 application {
@@ -36,8 +39,13 @@ tasks.named<Test>("test") {
     useJUnitPlatform()
 }
 
+tasks.register("hello") {
+    println("hello,world")
+}
+
 tasks.register<Copy>("copy-github") {
     from("../.github/workflowsbackup/gradle.yml")
     into("src/main/resources")
     include("*.*")
+    dependsOn("hello")
 }

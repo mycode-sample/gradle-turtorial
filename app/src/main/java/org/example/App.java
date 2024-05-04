@@ -3,12 +3,24 @@
  */
 package org.example;
 
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.util.Properties;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public static void main(String[] args) throws Exception {
+        Properties properties = System.getProperties();
+        JsonFactory jsonFactory = new JsonFactory();
+        ObjectMapper objectMapper = new ObjectMapper();
+        OutputStream os = new FileOutputStream("systemProperties.json");
+        objectMapper.writeValue(os, properties);
     }
+
 }
