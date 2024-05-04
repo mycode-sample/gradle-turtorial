@@ -17,7 +17,6 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         Properties properties = System.getProperties();
-        JsonFactory jsonFactory = new JsonFactory();
         ObjectMapper objectMapper = new ObjectMapper();
         OutputStream os = new FileOutputStream("systemProperties.json");
         objectMapper.writeValue(os, properties);
