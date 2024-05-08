@@ -43,6 +43,7 @@ dependencies {
     implementation(libs.jackson.databind)
     implementation(libs.jackson.annotations)
     implementation(libs.dom4j)
+    implementation(project(":lib"))
 }
 
 application {

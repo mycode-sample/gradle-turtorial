@@ -5,6 +5,7 @@ package org.example;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gradle.CustomLib;
 
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -18,8 +19,10 @@ public class App {
     public static void main(String[] args) throws Exception {
         Properties properties = System.getProperties();
         ObjectMapper objectMapper = new ObjectMapper();
-        OutputStream os = new FileOutputStream("systemProperties.json");
+        OutputStream os = new FileOutputStream("temp/systemProperties.json");
         objectMapper.writeValue(os, properties);
+        CustomLib customLib = new CustomLib();
+        customLib.useLib();
     }
 
 }

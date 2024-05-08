@@ -7,3 +7,4 @@
 
 rootProject.name = "gradle-turtorial"
 include("app")
+include("lib")
