@@ -4,6 +4,14 @@
  * The settings file is used to specify which projects to include in your build.
  * For more detailed information on multi-project builds, please refer to https://docs.gradle.org/8.6/userguide/multi_project_builds.html in the Gradle documentation.
  */
+buildscript {
+    repositories {
+        // Use Maven Central for resolving dependencies.
+        mavenLocal()
+        maven { setUrl("https://maven.aliyun.com/repository/public") }
+    }
+}
+
 
 rootProject.name = "gradle-turtorial"
 include("app")
