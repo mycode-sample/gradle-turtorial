@@ -3,7 +3,6 @@
  */
 package org.example;
 
-import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gradle.CustomLib;
 
