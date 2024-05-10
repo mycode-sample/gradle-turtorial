@@ -13,6 +13,7 @@ buildscript {
 }
 
 
-rootProject.name = "gradle-turtorial"
+rootProject.name = "gradle-tutorial"
 include("app")
 include("lib")
+
